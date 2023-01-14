@@ -18,6 +18,7 @@ function calcularImc() {
         //var resultado = document.getElementsByClassName('resultado-imc');
         var resultado = document.getElementById('resultado');
         var valorImc = document.getElementById('valorImc');
+        var ajuda = document.getElementById('ajuda');
 
         //console.log(resultado);
         resultado.style.visibility = 'visible'; //exibe a div
@@ -25,10 +26,13 @@ function calcularImc() {
 
         if(imc<18.5 || imc >=30){
             resultado.style.backgroundColor = 'red';
-        }else if(imc>=18.5 && imc <=24.9){
+            ajuda.style.visibility = 'visible';
+        }else if(imc>=18.5 && imc <=24.99){
             resultado.style.backgroundColor = 'green';
+            ajuda.style.visibility = 'hidden';
         }else if(imc >= 25 && imc<=29.9){
             resultado.style.backgroundColor = 'orange';
+            ajuda.style.visibility = 'visible';
         }
 
 
